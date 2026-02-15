@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -12,114 +12,108 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* lienzo del collage */
-.canvas {
-  position: relative;
-  width: 1200px;          /* ancho fijo para que quede EXACTO */
-  max-width: 100%;
+.wrapper {
+  max-width: 1100px;
   margin: 0 auto;
-  min-height: 1500px;     /* más alto para que nada se corte */
+  padding: 80px 40px;
 }
 
-/* imágenes */
-.canvas img {
-  position: absolute;
-  max-width: 100%;
+.collage {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+}
+
+.collage img {
+  width: 100%;
   height: auto;
   display: block;
 }
 
-/* textos */
-.note {
-  position: absolute;
-  font-size: 22px;
-  line-height: 1.4;
-  opacity: 0.85;
-}
+.big { grid-column: span 3; }
+.tall { grid-row: span 2; }
+.wide { grid-column: span 4; }
 
-.quote {
-  position: absolute;
-  font-size: 32px;
-  width: 320px;
-  line-height: 1.3;
+.note {
+  font-size: 20px;
+  line-height: 1.4;
   opacity: 0.8;
 }
 
-/* caption inferior */
+.quote {
+  font-size: 30px;
+  line-height: 1.3;
+  opacity: 0.75;
+}
+
 .caption {
-  position: absolute;
   font-size: 14px;
   opacity: 0.6;
 }
 
-/* spotify */
 .spotify {
-  position: absolute;
-  width: 260px;
-  height: 80px;
-  border-radius: 12px;
-  overflow: hidden;
+  grid-column: span 3;
+}
+
+@media (max-width: 800px) {
+  .collage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .big, .wide, .spotify {
+    grid-column: span 2;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="canvas">
+<div class="wrapper">
+  <div class="collage">
 
-  <!-- izquierda ventana -->
-  <img src="image01.jpg" style="top: 80px; left: 60px; width: 320px;">
+    <img src="image01.jpg" class="big">
+    <img src="image02.jpg" class="wide">
 
-  <!-- texto -->
-  <div class="note" style="top: 420px; left: 70px; width: 220px;">
-    see her face in the forest<br>
-    then it disappears
+    <div class="note">
+      see her face in the forest<br>
+      then it disappears
+    </div>
+
+    <img src="image09.jpg">
+    <img src="image07.jpg" class="tall">
+    <img src="image11.jpg">
+
+    <div class="quote">
+      “She’s never where she is.<br>
+      She’s only inside her head.”
+    </div>
+
+    <img src="image12.png">
+    <img src="image10.png">
+    <img src="image13.png">
+
+    <img src="image03.jpg" class="big">
+
+    <div class="caption">
+      while listening to teenage fantasy — feb14
+    </div>
+
+    <!-- Spotify embed CORRECTO -->
+    <iframe
+      class="spotify"
+      data-testid="embed-iframe"
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
   </div>
-
-  <!-- monje -->
-  <img src="image09.jpg" style="top: 640px; left: 60px; width: 260px;">
-
-  <!-- pétalos -->
-  <img src="image12.png" style="top: 900px; left: 110px; width: 220px;">
-
-  <!-- imagen superior centro -->
-  <img src="image02.jpg" style="top: 60px; left: 460px; width: 300px;">
-
-  <!-- meditation -->
-  <img src="image07.jpg" style="top: 220px; left: 450px; width: 320px;">
-
-  <!-- retrato bn -->
-  <img src="image11.jpg" style="top: 620px; left: 520px; width: 260px;">
-
-  <!-- cita -->
-  <div class="quote" style="top: 900px; left: 500px;">
-    “She’s never where she is.<br>
-    She’s only inside her head.”
-  </div>
-
-  <!-- loto -->
-  <img src="image10.png" style="top: 1120px; left: 560px; width: 180px;">
-
-  <!-- estrellas -->
-  <img src="image13.png" style="top: 120px; left: 880px; width: 220px;">
-
-  <!-- cama -->
-  <img src="image03.jpg" style="top: 420px; left: 840px; width: 340px;">
-
-  <!-- caption -->
-  <div class="caption" style="top: 770px; left: 900px;">
-    while listening to teenage fantasy — feb14
-  </div>
-
-  <!-- SPOTIFY CORREGIDO -->
-  <iframe
-    class="spotify"
-    style="top: 1080px; left: 60px;"
-    src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf"
-    frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-  </iframe>
-
 </div>
 
 </body>

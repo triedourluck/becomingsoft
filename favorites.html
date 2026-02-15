@@ -100,6 +100,24 @@ h2 {
   .card p {
     width: 100%;
   }
+/* MOBILE — 4 pósters en una sola fila, sin scroll */
+@media (max-width: 700px) {
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ← siempre 4 en línea */
+    gap: 12px; /* espacio más pequeño para que quepan */
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* mantiene formato póster */
+    object-fit: cover;
+  }
+
+  .card p {
+    font-size: 10px; /* texto más chico para que no rompa la fila */
+  }
 }
 </style>
 </head>

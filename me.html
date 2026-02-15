@@ -10,73 +10,17 @@ body {
   margin: 0;
   background: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
 }
 
+/* contenedor general */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 80px 20px;
+  text-align: center;
 }
 
-.spotify {
-  margin-bottom: 40px;
-}
-
-.hero {
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.form {
-  margin-top: 40px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <!-- Spotify -->
-  <iframe
-    class="spotify"
-    style="border-radius:12px"
-    src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf?utm_source=generator"
-    width="100%"
-    height="152"
-    frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
-
-  <!-- Imagen grande -->
-  <div class="hero">
-    <img src="collage.jpg" alt="me">
-  </div>
-
-  <!-- inbox soft -->
-<div style="max-width: 520px; margin: 80px auto;">
-  <iframe
-    src="https://tally.so/embed/TU-LINK-TALLY"
-    width="100%"
-    height="420"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    title="inbox soft"
-  ></iframe>
-</div>
-
-</div>
-<style>
-/* FADE SUAVE AL CARGAR */
+/* FADE SUAVE */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -90,52 +34,62 @@ body {
   }
 }
 
-/* GLOW ROSADO PARA EL INBOX */
+/* imagen grande */
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+/* GLOW ROSADO EN INBOX */
 .inbox iframe {
   border-radius: 14px;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
 
-.inbox iframe:focus,
-.inbox iframe:hover {
+.inbox iframe:hover,
+.inbox iframe:focus {
   box-shadow: 0 0 25px rgba(255, 170, 210, 0.55);
   transform: scale(1.01);
 }
 </style>
+</head>
 
+<body>
 
-<!-- PLAYLIST SPOTIFY -->
-<div class="fade-in" style="max-width: 520px; margin: 80px auto 40px auto;">
-  <iframe
-    style="border-radius:12px"
-    src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf?utm_source=generator"
-    width="100%"
-    height="152"
-    frameBorder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
-</div>
+<div class="container">
 
+  <!-- PLAYLIST SPOTIFY -->
+  <div class="fade-in" style="max-width:520px; margin:0 auto 40px auto;">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
 
-<!-- COLLAGE GRANDE -->
-<div class="fade-in" style="max-width: 900px; margin: 40px auto 60px auto; animation-delay: 0.2s;">
-  <img src="collage.jpg" style="width:100%; display:block;">
-</div>
+  <!-- COLLAGE GRANDE -->
+  <div class="fade-in hero" style="margin-bottom:60px; animation-delay:0.2s;">
+    <img src="foto-grande.png" alt="me">
+  </div>
 
+  <!-- INBOX SOFT -->
+  <div class="fade-in inbox" style="max-width:520px; margin:0 auto; animation-delay:0.4s;">
+    <iframe
+      data-tally-src="https://tally.so/embed/xXaGgd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="336"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="inbox soft">
+    </iframe>
+  </div>
 
-<!-- INBOX SOFT -->
-<div class="fade-in inbox" style="max-width: 520px; margin: 60px auto 120px auto; animation-delay: 0.4s;">
-  <iframe
-    data-tally-src="https://tally.so/embed/xXaGgd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-    loading="lazy"
-    width="100%"
-    height="336"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
-    title="inbox soft">
-  </iframe>
 </div>
 
 <script>
@@ -152,5 +106,6 @@ else if(d.querySelector('script[src="'+w+'"]')==null){
   d.body.appendChild(s);
 }
 </script>
+
 </body>
 </html>

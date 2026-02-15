@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shhh</title>
+
+<style>
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* BOTÓN BACK */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #888;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+.back-button:hover {
+  opacity: 0.5;
+  transform: translateX(-2px);
+}
+
+/* contenedor central */
+.container {
+  max-width: 520px;
+  margin: 120px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* fade suave */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSoft 1.6s ease forwards;
+}
+@keyframes fadeSoft {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* instrucciones */
+.instructions {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.instructions p {
+  margin: 0 0 10px 0;
+}
+
+/* glow rosado del inbox */
+.inbox iframe {
+  border-radius: 14px;
+  box-shadow:
+    0 0 18px rgba(255, 170, 210, 0.35),
+    0 0 40px rgba(255, 170, 210, 0.18);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.inbox iframe:hover,
+.inbox iframe:focus {
+  box-shadow:
+    0 0 28px rgba(255, 170, 210, 0.55),
+    0 0 60px rgba(255, 170, 210, 0.25);
+  transform: scale(1.01);
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-button">← BACK</a>
+
+<div class="container fade-in">
+
+  <!-- INSTRUCCIONES -->
+  <div class="instructions">
+    <p>1. inventa un alias y escribe tu mensaje, sin límite de caracteres, sin palabras ni links censurados (aunque no podrás ver el mensaje una vez haya sido enviado)</p>
+    <p>2. tu mensaje será recibido por mí y no será publicado (la idea es que sea privado)</p>
+    <p>3. los mensajes son ANÓNIMOS, pero si vienes seguido trata de recordar tu alias para poder identificarte :)</p>
+  </div>
+
+  <!-- INBOX TALLY -->
+  <div class="inbox">
+    <iframe
+      data-tally-src="https://tally.so/embed/xXaGgd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="420"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="inbox soft">
+    </iframe>
+  </div>
+
+</div>
+
+<script>
+/* cargar embed de Tally */
+var d=document,w="https://tally.so/widgets/embed.js",
+v=function(){
+  if(typeof Tally!="undefined") Tally.loadEmbeds();
+  else d.querySelectorAll("iframe[data-tally-src]:not([src])")
+    .forEach(function(e){ e.src=e.dataset.tallySrc });
+};
+if(typeof Tally!="undefined") v();
+else if(d.querySelector('script[src="'+w+'"]')==null){
+  var s=d.createElement("script");
+  s.src=w; s.onload=v; s.onerror=v;
+  d.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>

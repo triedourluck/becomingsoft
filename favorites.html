@@ -42,6 +42,7 @@ h2 {
   font-weight: 400;
 }
 
+/* GRID */
 .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -49,11 +50,24 @@ h2 {
   margin-top: 20px;
 }
 
+/* TARJETAS */
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .card img {
   width: 100%;
   height: 230px;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
 }
 
 .card p {
@@ -73,26 +87,95 @@ h2 {
 
 <h2>LAST WATCHED</h2>
 <div class="row">
-  <div class="card"><img src="image19.jpg"><p>Stoker</p></div>
-  <div class="card"><img src="image20.jpg"><p>Cure</p></div>
-  <div class="card"><img src="image21.jpg"><p>Priscilla</p></div>
-  <div class="card"><img src="image22.jpg"><p>Speak No Evil</p></div>
+  <div class="card">
+    <a href="https://boxd.it/d7wC0z" target="_blank">
+      <img src="image19.jpg">
+      <p>Stoker</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://boxd.it/d7c4od" target="_blank">
+      <img src="image20.jpg">
+      <p>Cure</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://boxd.it/d4D6yL" target="_blank">
+      <img src="image21.jpg">
+      <p>Priscilla</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://boxd.it/d5cVqD" target="_blank">
+      <img src="image22.jpg">
+      <p>Speak No Evil</p>
+    </a>
+  </div>
 </div>
 
 <h2>ON REPEAT</h2>
 <div class="row">
-  <div class="card"><img src="image23.jpg"><p>bloodstream</p></div>
-  <div class="card"><img src="image24.jpg"><p>Dracula Remix</p></div>
-  <div class="card"><img src="image25.jpg"><p>Motion</p></div>
-  <div class="card"><img src="image26.jpg"><p>All My Affection</p></div>
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/track/5Jsspu2gjuTHIte4CKvcLm?si=e515d3882f954a69" target="_blank">
+      <img src="image23.jpg">
+      <p>bloodstream</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/track/5yvVYFDUpbnjcnRBgjwTzM?si=13f24093c98647b6" target="_blank">
+      <img src="image24.jpg">
+      <p>Dracula Remix</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/track/7lOlKhTXmv4sMxyhjsWwn8?si=2b2fd8a3393c4091" target="_blank">
+      <img src="image25.jpg">
+      <p>Motion</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/track/43BhQyvFcRdYtcr3QdPtqF?si=5e69f6ece3de4cb8" target="_blank">
+      <img src="image26.jpg">
+      <p>All My Affection</p>
+    </a>
+  </div>
 </div>
 
 <h2>CURRENTLY OBSESSED</h2>
 <div class="row">
-  <div class="card"><img src="image16.jpg"><p>Ruby</p></div>
-  <div class="card"><img src="image17.jpg"><p>boy</p></div>
-  <div class="card"><img src="image15.jpg"><p>ORDER chaos ORDER</p></div>
-  <div class="card"><img src="image18.jpg"><p>EVERYONE'S A STAR!</p></div>
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/album/1vWMw6pu3err6qqZzI3RhH?si=24e278c9e7dd456a" target="_blank">
+      <img src="image16.jpg">
+      <p>Ruby</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/album/3Ry4DmajssDWHmThH2KseJ?si=d4d3304087974fca" target="_blank">
+      <img src="image17.jpg">
+      <p>boy</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/album/0O0OCwx5K3WRMrfqwVMR2f?si=2dc89d49d2c14625" target="_blank">
+      <img src="image15.jpg">
+      <p>ORDER chaos ORDER</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://open.spotify.com/intl-es/album/5PZaqv1kmnGYMvO8lS0Cqs?si=e762e063ee96422c" target="_blank">
+      <img src="image18.jpg">
+      <p>EVERYONE'S A STAR!</p>
+    </a>
+  </div>
 </div>
 
 </body>

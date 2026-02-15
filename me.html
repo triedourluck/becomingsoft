@@ -12,7 +12,24 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* contenedor general */
+/* BOTÓN BACK */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #888;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+.back-button:hover {
+  opacity: 0.5;
+  transform: translateX(-2px);
+}
+
+/* contenedor */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -26,12 +43,8 @@ body {
   transform: translateY(20px);
   animation: fadeSoft 1.6s ease forwards;
 }
-
 @keyframes fadeSoft {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* imagen grande */
@@ -40,15 +53,14 @@ body {
   display: block;
 }
 
-/* GLOW ROSADO EN INBOX */
+/* GLOW ROSADO inbox */
 .inbox iframe {
   border-radius: 14px;
   transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
-
 .inbox iframe:hover,
 .inbox iframe:focus {
-  box-shadow: 0 0 25px rgba(255, 170, 210, 0.55);
+  box-shadow: 0 0 25px rgba(255,170,210,0.55);
   transform: scale(1.01);
 }
 </style>
@@ -56,10 +68,12 @@ body {
 
 <body>
 
+<a href="index.html" class="back-button">← BACK</a>
+
 <div class="container">
 
-  <!-- PLAYLIST SPOTIFY -->
-  <div class="fade-in" style="max-width:520px; margin:0 auto 40px auto;">
+  <!-- PLAYLIST -->
+  <div class="fade-in" style="max-width:520px;margin:0 auto 40px;">
     <iframe
       style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf?utm_source=generator"
@@ -71,13 +85,13 @@ body {
     </iframe>
   </div>
 
-  <!-- COLLAGE GRANDE -->
-  <div class="fade-in hero" style="margin-bottom:60px; animation-delay:0.2s;">
-    <img src="foto-grande.png" alt="me">
+  <!-- COLLAGE -->
+  <div class="fade-in hero" style="margin-bottom:60px;animation-delay:0.2s;">
+    <img src="collage.jpg" alt="me">
   </div>
 
-  <!-- INBOX SOFT -->
-  <div class="fade-in inbox" style="max-width:520px; margin:0 auto; animation-delay:0.4s;">
+  <!-- INBOX -->
+  <div class="fade-in inbox" style="max-width:520px;margin:0 auto;animation-delay:0.4s;">
     <iframe
       data-tally-src="https://tally.so/embed/xXaGgd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
       loading="lazy"

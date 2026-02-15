@@ -12,7 +12,6 @@ body {
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
   padding: 60px 40px;
-  cursor: none; /* ocultar cursor normal */
 }
 
 /* BOTÓN BACK */
@@ -109,27 +108,6 @@ h2 {
 
   .card p { font-size: 10px; }
 }
-
-/* ✨ CURSOR GLOW ZEN */
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-
-  box-shadow:
-    0 0 12px rgba(255, 255, 255, 0.8),
-    0 0 30px rgba(255, 255, 255, 0.4),
-    0 0 60px rgba(255, 255, 255, 0.2);
-
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: transform 0.08s ease-out;
-}
 </style>
 </head>
 
@@ -141,37 +119,27 @@ h2 {
 
 <h2>LAST WATCHED</h2>
 <div class="row">
-  <div class="card"><a href="https://boxd.it/d7wC0z" target="_blank"><img src="image19.jpg"><p>Stoker</p></a></div>
-  <div class="card"><a href="https://boxd.it/d7c4od" target="_blank"><img src="image20.jpg"><p>Cure</p></a></div>
-  <div class="card"><a href="https://boxd.it/d4D6yL" target="_blank"><img src="image21.jpg"><p>Priscilla</p></a></div>
-  <div class="card"><a href="https://boxd.it/d5cVqD" target="_blank"><img src="image22.jpg"><p>Speak No Evil</p></a></div>
+  <div class="card"><a href="https://boxd.it/d7wC0z"><img src="image19.jpg"><p>Stoker</p></a></div>
+  <div class="card"><a href="https://boxd.it/d7c4od"><img src="image20.jpg"><p>Cure</p></a></div>
+  <div class="card"><a href="https://boxd.it/d4D6yL"><img src="image21.jpg"><p>Priscilla</p></a></div>
+  <div class="card"><a href="https://boxd.it/d5cVqD"><img src="image22.jpg"><p>Speak No Evil</p></a></div>
 </div>
 
 <h2>ON REPEAT</h2>
 <div class="row">
-  <div class="card"><a href="https://open.spotify.com/intl-es/track/5Jsspu2gjuTHIte4CKvcLm" target="_blank"><img src="4.jpg"><p>bloodstream</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/track/5yvVYFDUpbnjcnRBgjwTzM" target="_blank"><img src="3.jpg"><p>Dracula Remix</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/track/7lOlKhTXmv4sMxyhjsWwn8" target="_blank"><img src="1.jpg"><p>Motion</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/track/43BhQyvFcRdYtcr3QdPtqF" target="_blank"><img src="2.jpg"><p>All My Affection</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/track/5Jsspu2gjuTHIte4CKvcLm"><img src="4.jpg"><p>bloodstream</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/track/5yvVYFDUpbnjcnRBgjwTzM"><img src="3.jpg"><p>Dracula Remix</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/track/7lOlKhTXmv4sMxyhjsWwn8"><img src="1.jpg"><p>Motion</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/track/43BhQyvFcRdYtcr3QdPtqF"><img src="2.jpg"><p>All My Affection</p></a></div>
 </div>
 
 <h2>CURRENTLY OBSESSED</h2>
 <div class="row">
-  <div class="card"><a href="https://open.spotify.com/intl-es/album/1vWMw6pu3err6qqZzI3RhH" target="_blank"><img src="8.jpg"><p>Ruby</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/album/3Ry4DmajssDWHmThH2KseJ" target="_blank"><img src="6.jpg"><p>boy</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/album/0O0OCwx5K3WRMrfqwVMR2f" target="_blank"><img src="7.jpg"><p>ORDER chaos ORDER</p></a></div>
-  <div class="card"><a href="https://open.spotify.com/intl-es/album/5PZaqv1kmnGYMvO8lS0Cqs" target="_blank"><img src="5.jpg"><p>EVERYONE'S A STAR!</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/album/1vWMw6pu3err6qqZzI3RhH"><img src="8.jpg"><p>Ruby</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/album/3Ry4DmajssDWHmThH2KseJ"><img src="6.jpg"><p>boy</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/album/0O0OCwx5K3WRMrfqwVMR2f"><img src="7.jpg"><p>ORDER chaos ORDER</p></a></div>
+  <div class="card"><a href="https://open.spotify.com/intl-es/album/5PZaqv1kmnGYMvO8lS0Cqs"><img src="5.jpg"><p>EVERYONE'S A STAR!</p></a></div>
 </div>
-
-<div class="cursor"></div>
-
-<script>
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-</script>
 
 </body>
 </html>

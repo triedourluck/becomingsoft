@@ -78,17 +78,29 @@ h2 {
 }
   /* MOBILE — mantener fila horizontal desplazable */
 @media (max-width: 700px) {
+
   .row {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: 18px;
+    padding-bottom: 12px;
   }
 
   .card {
-    min-width: 140px; /* ancho del póster en mobile */
-    flex: 0 0 auto;
+    width: 140px;        /* ← mismo ancho fijo para TODAS */
+    flex: 0 0 140px;     /* ← evita que cambien de tamaño */
   }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* ← mantiene póster vertical igual */
+    object-fit: cover;
+  }
+
+  .card p {
+    width: 100%;
+  }
+}
 </style>
 </head>
 

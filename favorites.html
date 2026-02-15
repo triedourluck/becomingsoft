@@ -107,6 +107,34 @@ h2 {
   h2 {
     font-size: 18px;
   }
+/* 📱 MOBILE FIX REAL */
+@media (max-width: 700px) {
+
+  body {
+    padding: 40px 12px;
+    overflow-x: hidden; /* ← elimina scroll lateral */
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    gap: 8px; /* más pequeño para que quepa */
+    width: 100%;
+  }
+
+  .card {
+    min-width: 0; /* ← clave en Safari */
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+  }
+
+  .card p {
+    font-size: 10px;
+  }
 }
 </style>
 </head>

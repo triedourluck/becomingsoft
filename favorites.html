@@ -25,16 +25,18 @@
     }
 
     .row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 20px;
 }
 
-.card {
-  min-width: 140px;
-  flex-shrink: 0;
-}
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
 
     .card a:hover {
       transform: scale(1.05);

@@ -42,7 +42,7 @@ h2 {
   font-weight: 400;
 }
 
-/* GRID */
+/* GRID DESKTOP */
 .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -76,47 +76,36 @@ h2 {
   opacity: 0.7;
   color: #fff;
 }
-  /* MOBILE — mantener fila horizontal desplazable */
+
+/* 📱 MOBILE — 4 en una sola fila SIN SCROLL */
 @media (max-width: 700px) {
 
-  .row {
-    display: flex;
-    overflow-x: auto;
-    gap: 18px;
-    padding-bottom: 12px;
+  body {
+    padding: 40px 16px;
   }
-
-  .card {
-    width: 140px;        /* ← mismo ancho fijo para TODAS */
-    flex: 0 0 140px;     /* ← evita que cambien de tamaño */
-  }
-
-  .card img {
-    width: 100%;
-    aspect-ratio: 2 / 3; /* ← mantiene póster vertical igual */
-    object-fit: cover;
-  }
-
-  .card p {
-    width: 100%;
-  }
-/* MOBILE — 4 pósters en una sola fila, sin scroll */
-@media (max-width: 700px) {
 
   .row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* ← siempre 4 en línea */
-    gap: 12px; /* espacio más pequeño para que quepan */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
 
   .card img {
     width: 100%;
-    aspect-ratio: 2 / 3; /* mantiene formato póster */
+    aspect-ratio: 2 / 3;
     object-fit: cover;
   }
 
   .card p {
-    font-size: 10px; /* texto más chico para que no rompa la fila */
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 18px;
   }
 }
 </style>

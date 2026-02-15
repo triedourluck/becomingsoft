@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -15,11 +15,13 @@ body {
 /* lienzo del collage */
 .canvas {
   position: relative;
-  width: 100%;
-  min-height: 1600px;
+  width: 1200px;          /* ancho fijo para que quede EXACTO */
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 1500px;     /* más alto para que nada se corte */
 }
 
-/* todas las imágenes */
+/* imágenes */
 .canvas img {
   position: absolute;
   max-width: 100%;
@@ -32,22 +34,15 @@ body {
   position: absolute;
   font-size: 22px;
   line-height: 1.4;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* cita grande */
 .quote {
   position: absolute;
   font-size: 32px;
-  width: 300px;
+  width: 320px;
   line-height: 1.3;
-  opacity: 0.75;
-}
-
-/* reproductor spotify */
-.spotify {
-  position: absolute;
-  width: 260px;
+  opacity: 0.8;
 }
 
 /* caption inferior */
@@ -56,6 +51,15 @@ body {
   font-size: 14px;
   opacity: 0.6;
 }
+
+/* spotify */
+.spotify {
+  position: absolute;
+  width: 260px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 </style>
 </head>
 
@@ -63,54 +67,55 @@ body {
 
 <div class="canvas">
 
-  <!-- foto izquierda ventana -->
-  <img src="image01.jpg" style="top: 80px; left: 80px; width: 320px;">
+  <!-- izquierda ventana -->
+  <img src="image01.jpg" style="top: 80px; left: 60px; width: 320px;">
 
-  <!-- texto vertical -->
-  <div class="note" style="top: 420px; left: 90px; width: 220px;">
+  <!-- texto -->
+  <div class="note" style="top: 420px; left: 70px; width: 220px;">
     see her face in the forest<br>
     then it disappears
   </div>
 
-  <!-- monje energía -->
-  <img src="image09.jpg" style="top: 640px; left: 80px; width: 260px;">
+  <!-- monje -->
+  <img src="image09.jpg" style="top: 640px; left: 60px; width: 260px;">
 
   <!-- pétalos -->
-  <img src="image12.png" style="top: 900px; left: 120px; width: 220px;">
+  <img src="image12.png" style="top: 900px; left: 110px; width: 220px;">
 
   <!-- imagen superior centro -->
-  <img src="image02.jpg" style="top: 60px; left: 480px; width: 300px;">
+  <img src="image02.jpg" style="top: 60px; left: 460px; width: 300px;">
 
-  <!-- texto presence -->
-  <img src="image07.jpg" style="top: 220px; left: 470px; width: 320px;">
+  <!-- meditation -->
+  <img src="image07.jpg" style="top: 220px; left: 450px; width: 320px;">
 
-  <!-- retrato blanco y negro -->
+  <!-- retrato bn -->
   <img src="image11.jpg" style="top: 620px; left: 520px; width: 260px;">
 
   <!-- cita -->
-  <div class="quote" style="top: 920px; left: 500px;">
-    “She’s never where she is.  
+  <div class="quote" style="top: 900px; left: 500px;">
+    “She’s never where she is.<br>
     She’s only inside her head.”
   </div>
 
-  <!-- flor loto -->
+  <!-- loto -->
   <img src="image10.png" style="top: 1120px; left: 560px; width: 180px;">
 
   <!-- estrellas -->
-  <img src="image13.png" style="top: 120px; left: 900px; width: 220px;">
+  <img src="image13.png" style="top: 120px; left: 880px; width: 220px;">
 
-  <!-- foto cama derecha -->
-  <img src="image03.jpg" style="top: 420px; left: 880px; width: 340px;">
+  <!-- cama -->
+  <img src="image03.jpg" style="top: 420px; left: 840px; width: 340px;">
 
-  <!-- caption cama -->
-  <div class="caption" style="top: 770px; left: 920px;">
+  <!-- caption -->
+  <div class="caption" style="top: 770px; left: 900px;">
     while listening to teenage fantasy — feb14
   </div>
 
-  <!-- reproductor spotify -->
-  <iframe class="spotify"
-    style="top: 1040px; left: 80px; height: 80px; border-radius:12px;"
-    src="https://open.spotify.com/playlist/0C8B0DSJYLOH5eApBRoTgf?si=AhEwUxQ7THq24eLw10ga5Q&pi=3O14-e0JRv2RI"
+  <!-- SPOTIFY CORREGIDO -->
+  <iframe
+    class="spotify"
+    style="top: 1080px; left: 60px;"
+    src="https://open.spotify.com/embed/playlist/0C8B0DSJYLOH5eApBRoTgf"
     frameborder="0"
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
   </iframe>
